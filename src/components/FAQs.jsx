@@ -113,4 +113,4 @@ const FAQs = () => {
   );
 };
 
-export default FAQs;
+export default FAQs; 
