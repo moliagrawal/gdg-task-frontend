@@ -2,22 +2,19 @@ import React, { useState } from 'react';
 
 const FAQItem = ({ question, answer, color }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
     <div className="mb-6 flex flex-col items-center w-full">
-      {/* Question Container with Thicker and Lighter Grey Border */}
       <button
         onClick={toggleOpen}
-        className="flex items-center justify-start w-full max-w-lg px-5 py-3 text-left border-4 border-[#e1e1e1] rounded-full shadow-md bg-white transition-colors duration-300"
+        className="flex items-center justify-start w-full max-w-lg px-5 py-3 text-left border-4 border-[#e1e1e1] rounded-full bg-white shadow-md transition-colors duration-300 hover:shadow-lg"
         aria-expanded={isOpen}
         style={{
-          fontFamily: "'Google Sans', Roboto, sans-serif", // Google Sans (or fallback to Roboto)
-          color: '#5f5f5f', // Color for question text
+          fontFamily: "'Google Sans', sans-serif",
+          color: '#5f5f5f',
         }}
       >
-        {/* Arrow on the Left */}
         <div
           className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
           style={{ color }}
@@ -33,30 +30,23 @@ const FAQItem = ({ question, answer, color }) => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </div>
-
-        {/* Question Text */}
         <h3 className="font-semibold text-lg ml-4" style={{ fontWeight: 700, color: '#5f5f5f' }}>
           {question}
         </h3>
       </button>
-
-      {/* Answer Section with Rounded Colored Sidebar */}
       {isOpen && (
         <div className="relative w-full max-w-md mt-2 flex justify-center">
-          {/* Rounded Colored Sidebar outside the border */}
           <div
             className="absolute left-[-6px] top-0 bottom-0 w-2 rounded-tl-lg rounded-bl-lg"
             style={{ backgroundColor: color }}
           ></div>
-
           <div
-            className="p-4 w-full rounded-lg bg-gray-50 border-4 border-[#e1e1e1]"
+            className="p-4 w-full rounded-lg bg-gray-50 border-4 border-[#e1e1e1] shadow-md transition-shadow duration-300 hover:shadow-lg"
             style={{
-              fontFamily: "'Google Sans', Roboto, sans-serif", // Google Sans for answer text
-              color: '#5f5f5f', // Color for answer text
+              fontFamily: "'Google Sans', sans-serif",
+              color: '#5f5f5f',
             }}
           >
-            {/* Answer Text */}
             <div className="pl-4">{answer}</div>
           </div>
         </div>
@@ -90,7 +80,7 @@ const FAQs = () => {
     },
     {
       question: 'How to reach us?',
-      answer: 'Mail us at dsc.rknec@gmail.com',
+      answer: <p>Mail us at <a href="mailto:dsc.rknec@gmail.com" className="text-[#5f5f5f] underline">dsc.rknec@gmail.com</a></p>,
       color: '#EF4444',
     },
   ];
@@ -100,8 +90,8 @@ const FAQs = () => {
       <h2
         className="text-center text-4xl font-bold mb-10"
         style={{
-          fontFamily: "'Google Sans', Roboto, sans-serif",
-          color: '#5f5f5f', // Color for the FAQs heading
+          fontFamily: "'Google Sans', sans-serif",
+          color: '#5f5f5f',
         }}
       >
         FAQs
@@ -113,4 +103,4 @@ const FAQs = () => {
   );
 };
 
-export default FAQs; 
+export default FAQs;
