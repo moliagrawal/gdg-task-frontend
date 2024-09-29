@@ -1,54 +1,77 @@
 import React from 'react';
 import { default as footer } from "../assets/footer.svg";
+import { default as insta } from "../assets/insta.svg";
+import { default as linkedin } from "../assets/linkedin.svg";
+import { default as twitter } from "../assets/twitter.svg";
 import { default as gdg } from "../assets/gdg.svg";
+import { default as loc } from "../assets/loc.svg"
+import { default as mail } from "../assets/mail.svg"
 
 function Footer() {
   return (
     <footer className="bg-gray-100 pt-10 border-t">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-        
+
         {/* Left Section */}
-        <div className="text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start">
+        <div className="text-center md:text-center">
+          <div className="flex flex-col items-center">
+            {/* GDG Logo Above Text */}
             <img
               src={gdg}
               alt="GDG Logo"
-              className="h-12"
+              className="h-16 mb-2" // Increase height for better visibility
             />
-            <div className="ml-4">
+            <div className="text-center">
               <p className="text-lg font-semibold text-gray-800" style={{ fontFamily: 'Google Sans, sans-serif' }}>Google Developer Groups</p>
               <p>
-                <span className="text-blue-600" style={{ fontFamily: 'Google Sans, sans-serif' }}>On Campus</span> · 
+                <span className="text-blue-600" style={{ fontFamily: 'Google Sans, sans-serif' }}>On Campus</span> ·
                 <span className="text-gray-600" style={{ fontFamily: 'Google Sans, sans-serif' }}> Ramdeobaba University</span>
               </p>
             </div>
           </div>
         </div>
 
-        {/* Longer and Bolder Vertical Line */}
-        <div className="hidden md:block border-l-4 border-gray-500 h-24 mx-8"></div>
+        {/* Thinner, Longer, and Darker Vertical Line */}
+        <div className="hidden md:block border-l-2 border-gray-700 h-32 mx-8"></div>
 
         {/* Right Section */}
         <div className="mt-6 md:mt-0 text-center md:text-left">
           <div className="text-gray-900" style={{ fontFamily: 'Google Sans, sans-serif' }}>
-            <p>Shri Ramdeobaba College of Engineering and Management,</p>
-            <p>Ramdeo Tekdi, Gittikhadan, Katol Road, Nagpur - 440013</p>
-            <p>Email: 
-              <a href="mailto:dsc.rknec@gmail.com" className="text-black underline hover:text-blue-600 ml-1">dsc.rknec@gmail.com</a>
-            </p>
-          </div>
+            {/* Location Icon + Address */}
+            {/* Location Icon + Address */}
+            <div className="flex items-center mb-2">
+              <img src={loc} alt="Location" className="h-5 mr-2" />
+              <div className="ml-2"> {/* Added margin-left for space between icon and address */}
+                <p>Shri Ramdeobaba College of Engineering and Management,</p>
+                <p>Ramdeo Tekdi, Gittikhadan, Katol Road, Nagpur - 440013</p>
+              </div>
+            </div>
 
-          {/* Social Media Icons */}
-          <div className="flex justify-center md:justify-start mt-4 space-x-6">
-            <a href="#" className="hover:opacity-75" aria-label="Instagram">
-              <img src="/instagram-icon.png" alt="Instagram" className="h-6" />
-            </a>
-            <a href="#" className="hover:opacity-75" aria-label="LinkedIn">
-              <img src="/linkedin-icon.png" alt="LinkedIn" className="h-6" />
-            </a>
-            <a href="#" className="hover:opacity-75" aria-label="Twitter">
-              <img src="/twitter-icon.png" alt="Twitter" className="h-6" />
-            </a>
+            {/* Mail Icon + Email ID + Follow Us in the same row */}
+            <div className="flex items-center mb-4">
+              <img src={mail} alt="Mail" className="h-5 mr-2" />
+              <p className="ml-2"> {/* Added margin-left for space between icon and email */}
+                <a href="mailto:dsc.rknec@gmail.com" className="text-black underline hover:text-blue-600 ml-1">dsc.rknec@gmail.com</a>
+              </p>
+
+              {/* Spacer */}
+              <span className="mx-6"></span>
+
+              {/* Follow Us Section */}
+              <p className="text-gray-900 font-semibold">Follow Us:</p>
+            </div>
+
+            <div className="ml-64 mt-2 pb-4 flex space-x-6">
+              <a href="#" className="hover:opacity-75" aria-label="Instagram">
+                <img src={insta} alt="Instagram" className="h-18" /> {/* Increased size to h-8 */}
+              </a>
+              <a href="#" className="hover:opacity-75" aria-label="LinkedIn">
+                <img src={linkedin} alt="LinkedIn" className="h-18" /> {/* Increased size to h-8 */}
+              </a>
+              <a href="#" className="hover:opacity-75" aria-label="Twitter">
+                <img src={twitter} alt="Twitter" className="h-18" /> {/* Increased size to h-8 */}
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -59,7 +82,7 @@ function Footer() {
           src={footer}
           alt="Footer Shapes"
           className="w-full block"
-          style={{ marginBottom: '0px' }} // Ensure no margin at the bottom
+          style={{ marginBottom: '0px' }} // Adjust height to match the look
         />
       </div>
     </footer>

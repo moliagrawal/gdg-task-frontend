@@ -5,25 +5,25 @@ import { default as cloud } from '../assets/cloud.svg'; // replace with correct 
 
 const Technologies = () => {
   return (
-    <div className="flex flex-col items-center p-8 font-google-sans">
+    <div className="flex flex-col items-center p-4 md:p-8 font-google-sans"> {/* Adjust padding for mobile */}
       {/* Heading Section */}
-      <div className="flex items-center mb-8">
+      <div className="flex items-center mb-8 w-full justify-center"> {/* Center and ensure full width */}
         <div className="h-1 bg-red-500 w-40" /> {/* Further elongated red line */}
         <h2 className="text-3xl font-semibold mx-4 text-[#5f5f5f]">Technologies</h2>
         <div className="h-1 bg-red-500 w-40" /> {/* Further elongated red line */}
       </div>
-      <p className="text-[#5f5f5f] text-lg mb-8">Domains That Excite Us to Collaborate and Teach!</p>
+      <p className="text-[#5f5f5f] text-lg mb-8 text-center">Domains That Excite Us to Collaborate and Teach!</p>
 
       {/* Cards Section */}
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-col md:flex-row justify-center gap-8 w-full"> {/* Change to column on mobile */}
         {/* Android Card */}
         <a
           href="https://developer.android.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="transform hover:scale-105 transition-transform duration-300"
+          className="transform hover:scale-105 transition-transform duration-300 w-full md:w-1/3" // Responsive width
         >
-          <div className="bg-white shadow-2xl rounded-lg w-96 p-6 flex flex-col items-center hover:shadow-3xl transition-shadow duration-300 relative">
+          <div className="bg-white shadow-2xl rounded-lg p-6 flex flex-col items-center hover:shadow-3xl transition-shadow duration-300 relative">
             <div className="absolute -top-3 w-32 h-1 bg-red-500 left-1/2 transform -translate-x-1/2" /> {/* Centered elongated red top bar */}
             <img src={android} alt="Android" className="w-20 h-20 mb-4" />
             <h3 className="text-xl font-medium text-[#5f5f5f]">Android</h3>
@@ -47,9 +47,9 @@ const Technologies = () => {
           href="https://flutter.dev/"
           target="_blank"
           rel="noopener noreferrer"
-          className="transform hover:scale-105 transition-transform duration-300"
+          className="transform hover:scale-105 transition-transform duration-300 w-full md:w-1/3" // Responsive width
         >
-          <div className="bg-white shadow-2xl rounded-lg w-96 p-6 flex flex-col items-center hover:shadow-3xl transition-shadow duration-300 relative">
+          <div className="bg-white shadow-2xl rounded-lg p-6 flex flex-col items-center hover:shadow-3xl transition-shadow duration-300 relative">
             <div className="absolute -top-3 w-32 h-1 bg-blue-500 left-1/2 transform -translate-x-1/2" /> {/* Centered elongated blue top bar */}
             <img src={flutter} alt="Flutter" className="w-20 h-20 mb-4" />
             <h3 className="text-xl font-medium text-[#5f5f5f]">Flutter</h3>
@@ -73,9 +73,9 @@ const Technologies = () => {
           href="https://cloud.google.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="transform hover:scale-105 transition-transform duration-300"
+          className="transform hover:scale-105 transition-transform duration-300 w-full md:w-1/3" // Responsive width
         >
-          <div className="bg-white shadow-2xl rounded-lg w-96 p-6 flex flex-col items-center hover:shadow-3xl transition-shadow duration-300 relative">
+          <div className="bg-white shadow-2xl rounded-lg p-6 flex flex-col items-center hover:shadow-3xl transition-shadow duration-300 relative">
             <div className="absolute -top-3 w-32 h-1 bg-green-500 left-1/2 transform -translate-x-1/2" /> {/* Centered elongated green top bar */}
             <img src={cloud} alt="Cloud" className="w-20 h-20 mb-4" />
             <h3 className="text-xl font-medium text-[#5f5f5f]">Cloud</h3>
