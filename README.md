@@ -5,7 +5,7 @@
 
 Welcome to the GDG Frontend task. It is a responsive web page made with React that has the following features:
 
-It has been deployed at Vercel and can be checked out at: [https://gdg-task-frontend.vercel.app/]
+It has been deployed at Vercel and can be checked out at: https://gdg-task-frontend.vercel.app/
 
 ## Getting Started
 
@@ -42,7 +42,7 @@ To start the development server, run:
 ```bash
 npm start
 ```
-The application will be accessible at [http://localhost:3000].
+The application will be accessible at http://localhost:3000.
 
 ### Technologies Used
 
@@ -72,4 +72,4 @@ If you'd like to contribute to this project, please feel free to submit a pull r
 
 ## Contact
 
-For any questions or feedback, feel free to reach out to me at [agrawalmd_3@rknec.edu]
+For any questions or feedback, feel free to reach out to me at agrawalmd_3@rknec.edu
